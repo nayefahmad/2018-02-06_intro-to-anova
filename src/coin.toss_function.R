@@ -64,7 +64,8 @@ coin.toss <- function(reps = 100,
                                       numcoins, 
                                       " coins ", 
                                       reps, 
-                                      " times")) + 
+                                      " times"), 
+                       subtitle = as.character(Sys.time())) + 
                   
                   theme_classic(base_size = 16)
       
@@ -82,7 +83,8 @@ coin.toss <- function(reps = 100,
                                       numcoins, 
                                       " coins ", 
                                       reps, 
-                                      " times")) + 
+                                      " times"), 
+                       subtitle = as.character(Sys.time())) + 
                   
                   theme_classic(base_size = 16)
       
@@ -92,7 +94,10 @@ coin.toss <- function(reps = 100,
             p1.bar
       } else if (layout ==2){
             setpar <- par(mfrow=c(2,1))
-            print(p1.bar); print(p2.box) 
+            
+            return(list(p1.bar, p2.box))
+            # print(p1.bar); print(p2.box) 
+            
             par(setpar)  # reset display 
       }
       
