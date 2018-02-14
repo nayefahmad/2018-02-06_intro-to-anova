@@ -4,6 +4,11 @@
 # FUNCTION TO SIMULATE COIN TOSSES 
 #***************************************
 
+# todo: --------------------------------
+# replace boxplot with binomial dist. 
+#***************************************
+
+
 # define fn: -----------
 coin.toss <- function(reps = 100, 
                       numcoins=7, 
